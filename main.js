@@ -69,7 +69,7 @@ trendingButton.addEventListener("click",()=>{
 // @TODO - Random GIF
 // randomButton.addEventListener("click",()=>{
 //     // Fetch JSON data from base url !
-//     fetch('https://api.giphy.com/v1/gifs/categories?api_key=eisycQlpcWXRn38ebyMigXiu2VSB992i')
+//     fetch('https://api.giphy.com/v1/gifs/categories?api_key=')
 //     .then(response => response.json())
 //     .then((result) => {
 //         console.log(result); //Response will be actual JSON DATa

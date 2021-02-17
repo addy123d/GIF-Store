@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: #1c1d1e;
+    color: #f5f5f5;
+}
+
+/* Title */
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 3%;
+}
+
+.title h2 {
+    font-family: 'Reggae One', sans-serif;
+    font-size: 1.8rem;
+}
+
+.title h2 span {
+    color: rgb(213, 241, 85);
+}
+
+.search {
+    margin: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    padding: .8em 1em .8em 1em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.categories {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+
+}
+
+
+/* GIF's Container */
+
+.gifs-container {
+    column-count: 3;
+}
+
+
+.gifs-container>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container>div {
+    margin-bottom: 10%;
+}
+
+/* Meal Title */
+.container .title {
+    font-family: 'Montserrat', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Image Styling */
+.container .imageurl img {
+    display: block;
+    height: 250px;
+    width: 350px;
+}
+
+/* Button */
+button {
+    padding: 1em 2em 1em 2em;
+    outline: none;
+    background: rgb(36, 108, 202);
+    border: none;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #1c1d1e;
+    border-radius: 5px;
+}
+
+button:hover {
+    transition: all .2s;
+    background: rgb(23, 66, 122);
+}
+
+
+/* Trending Button */
+.trending,
+.categories {
+    position: fixed;
+    top: 15%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+
+}
+
+.trending input[type="button"] {
+    padding: 1em;
+    background: #ec4242;
+    border: none;
+    outline: none;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px #1d1c1e;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.trending input[type="button"]:hover {
+    background: #c51b1b;
+}
+
+
+/* Category */
+.categories {
+    top: 90%;
+    left: 90%;
+}
+
+.categories select {
+    padding: 1em 2em 1em 2em;
+    font-family: 'Poppins', cursive;
+    background: rgb(127, 139, 245);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #1d1c1e;
+    letter-spacing: 2px;
+}

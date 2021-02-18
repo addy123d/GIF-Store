@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Title Bar Icon -->
+    <link rel="icon"
+        href="https://colinbendell.cloudinary.com/image/upload/c_crop,f_auto,g_auto,h_350,w_400/v1512090971/Wizard-Clap-by-Markus-Magnusson.gif"
+        type="image/x-icon">
+
     <!-- Link stylesheet here -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -25,41 +30,51 @@
 </head>
 
 <body>
-    <!-- Title -->
-    <div class="title">
-        <h2>GIF <span>Store</span></h2>
-    </div>
 
-    <!-- Search gif! -->
-    <div class="search">
-        <input type="search" id="main_gif" placeholder="🔎 Search GIF..." autocomplete="off">
-    </div>
-
-    <!-- Trending Button -->
-    <div class="trending">
-        <input type="button" id="trendingButton" value="🔥">
+    <!-- Random GIF-->
+    <div class="randomGIF">
+        <img id="randomimage" src="" alt="">
     </div>
 
     <!-- Random Button -->
-    <!-- <div class="random">
-        <input type="button" id="randomButton" value="Random">
-    </div> -->
-
-    <!-- GIF's Categories -->
-    <div class="categories">
-        <select id="category">
-            <option hidden>Choose</option>
-            <option>Anime</option>
-            <option>Art & Design</option>
-            <option>Memes</option>
-            <option>News & Politics</option>
-            <option>Food</option>
-        </select>
+    <div class="random">
+        <input type="button" id="randomButton" value="⚡">
     </div>
 
-    <!-- GIF's container -->
-    <div class="gifs-container">
-    </div>
+    <section class="main">
+
+        <!-- Title -->
+        <div class="title">
+            <h2>GIF <span>Store</span></h2>
+        </div>
+
+        <!-- Search gif! -->
+        <div class="search">
+            <input type="search" id="main_gif" placeholder="🔎 Search GIF..." autocomplete="off">
+        </div>
+
+        <!-- Trending Button -->
+        <div class="trending">
+            <input type="button" id="trendingButton" value="🔥">
+        </div>
+
+        <!-- GIF's Categories -->
+        <div class="categories">
+            <select id="category">
+                <option hidden>Choose</option>
+                <option>Anime</option>
+                <option>Art & Design</option>
+                <option>Memes</option>
+                <option>News & Politics</option>
+                <option>Food</option>
+            </select>
+        </div>
+
+        <!-- GIF's container -->
+        <div class="gifs-container"></div>
+
+    </section>
+
 </body>
 <script src="main.js"></script>
 

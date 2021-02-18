@@ -13,7 +13,11 @@ const trendingButton = document.querySelector("#trendingButton");
 const randomButton = document.querySelector("#randomButton");
 
 const gifCategory = document.querySelector("#category");
+const categories = document.querySelector(".categories");
 
+const mainBody = document.querySelector(".main");
+const randomGIF = document.querySelector("#randomimage");
+const randomBox = document.querySelector(".randomGIF");
 
 // Search GIF
 searchBar.addEventListener("input",()=>{
@@ -56,7 +60,7 @@ trendingButton.addEventListener("click",()=>{
           let html = "";
           for(let i = 0; i< gifData.length; i++){
               html += `<div class="container">
-                              <img src="${gifData[i].images.original.url}"
+                              <img src="${gifData[i].images.preview_webp.url}"
                                   alt="news image">
                       </div>`
           }
@@ -67,28 +71,25 @@ trendingButton.addEventListener("click",()=>{
 })
 
 // @TODO - Random GIF
-// randomButton.addEventListener("click",()=>{
-//     // Fetch JSON data from base url !
-//     fetch('https://api.giphy.com/v1/gifs/categories?api_key=eisycQlpcWXRn38ebyMigXiu2VSB992i')
-//     .then(response => response.json())
-//     .then((result) => {
-//         console.log(result); //Response will be actual JSON DATa
+randomButton.addEventListener("click",()=>{
+    // CSS PART !
+    mainBody.classList.toggle("active");
+    randomGIF.classList.toggle("active");
+    categories.classList.toggle("active");
 
-//         // const gifData = result.data;
-//         // console.log(gifData);
+    // Fetch JSON data from base url !
+    fetch('https://api.giphy.com/v1/gifs/random?api_key=eisycQlpcWXRn38ebyMigXiu2VSB992i')
+    .then(response => response.json())
+    .then((result) => {
+        console.log(result); //Response will be actual JSON DATa
 
-//         // let html = "";
-//         // for(let i = 0; i< gifData.length; i++){
-//         //     html += `<div class="container">
-//         //                     <img src="${gifData[i].images.preview_webp.url}"
-//         //                         alt="news image">
-//         //             </div>`
-//         // }
+        imageContainer.innerHTML = "";
 
-//         // imageContainer.innerHTML = html;
-//     })
-//     .catch(error=>console.error(`Something went wrong - ${error}`));
-// })
+        randomGIF.src = result.data.images.preview_webp.url;
+        // result.data.images.preview_webp.url
+    })
+    .catch(error=>console.error(`Something went wrong - ${error}`));
+})
 
 
 // Category wise GIF's

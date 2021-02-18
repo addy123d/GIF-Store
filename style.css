@@ -9,6 +9,11 @@ body {
     background: #ffffff;
 }
 
+.main.active {
+    filter: blur(10px);
+    pointer-events: none;
+}
+
 /* Title */
 .title {
     display: flex;
@@ -38,7 +43,7 @@ body {
 
 .search input {
     padding: 1em 1em 1em 1.3em;
-    max-width: 100%;
+    width: 70%;
     border-radius: 40px;
     border: none;
     outline: none;
@@ -77,13 +82,6 @@ body {
     margin-bottom: 10%;
 }
 
-/* Meal Title */
-.container .title {
-    font-family: 'Montserrat', cursive;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 /* Image Styling */
 img {
     height: auto;
@@ -120,9 +118,11 @@ button:hover {
     top: 15%;
     left: 90%;
     transform: translate(-50%, -50%);
+    display: block;
 }
 
-.trending input[type="button"] {
+.trending input[type="button"],
+.random input[type="button"] {
     padding: 1em;
     border: none;
     outline: none;
@@ -130,8 +130,6 @@ button:hover {
     height: 70px;
     width: 70px;
     background: #f3542a;
-    box-shadow: inset 20px 20px 60px #f3542a,
-        inset -20px -20px 60px #e75f5f;
     border-radius: 100%;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
@@ -156,6 +154,10 @@ button:hover {
     left: 90%;
 }
 
+.categories.active {
+    display: none;
+}
+
 .categories select {
     padding: 1em 2em 1em 2em;
     font-family: 'Poppins', cursive;
@@ -171,18 +173,63 @@ button:hover {
     letter-spacing: 2px;
 }
 
+/* Random Button */
+.random {
+    position: fixed;
+    top: 90%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.random input[type="button"] {
+    background: #7049f0;
+    transition: .2s;
+}
+
+.random input[type="button"]:hover {
+    background: #492f9c;
+}
+
+
+/* Random GIF */
+.randomGIF #randomimage {
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    transform: translateY(-50%, -50%);
+    display: none;
+    height: 300px;
+    width: 300px;
+    z-index: 1;
+}
+
+.randomGIF #randomimage.active {
+    display: block;
+}
 
 /* Newly added ! */
+@media (max-width:1109px) {
+    .categories {
+        left: 50%;
+    }
+}
+
+
 @media (max-width:639px) {
     .gifs-container {
         column-count: 2;
     }
 
     .trending {
-        top: 6%;
+        top: 8%;
     }
 
-    .trending input[type="button"] {
+    .random {
+        top: 90%;
+    }
+
+    .trending input[type="button"],
+    .random input[type="button"] {
         height: 50px;
         width: 50px;
         font-size: .9rem;
@@ -190,5 +237,22 @@ button:hover {
 
     .categories {
         left: 50%;
+    }
+
+    .search input {
+        max-width: 100%;
+    }
+
+    .randomGIF #randomimage {
+        /* margin: 3%; */
+        top: 10%;
+        left: 8%;
+        transform: translateY(-50%, -50%);
+        height: auto;
+        max-width: 100%;
+    }
+
+    .title h2 {
+        font-family: .5rem;
     }
 }

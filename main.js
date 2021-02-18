@@ -21,7 +21,7 @@ const randomBox = document.querySelector(".randomGIF");
 
 // Search GIF
 searchBar.addEventListener("input",()=>{
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=eisycQlpcWXRn38ebyMigXiu2VSB992i&q=${searchBar.value}`;
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=&q=${searchBar.value}`;
 
     // Fetch JSON data from base url !
     fetch(url)
@@ -49,7 +49,7 @@ searchBar.addEventListener("input",()=>{
 // Trending GIF's
 trendingButton.addEventListener("click",()=>{
       // Fetch JSON data from base url !
-      fetch('https://api.giphy.com/v1/gifs/trending?api_key=eisycQlpcWXRn38ebyMigXiu2VSB992i')
+      fetch('https://api.giphy.com/v1/gifs/trending?api_key=')
       .then(response => response.json())
       .then((result) => {
           console.log(result); //Response will be actual JSON DATa
@@ -71,6 +71,7 @@ trendingButton.addEventListener("click",()=>{
 })
 
 // @TODO - Random GIF
+
 randomButton.addEventListener("click",()=>{
     // CSS PART !
     mainBody.classList.toggle("active");
@@ -78,7 +79,7 @@ randomButton.addEventListener("click",()=>{
     categories.classList.toggle("active");
 
     // Fetch JSON data from base url !
-    fetch('https://api.giphy.com/v1/gifs/random?api_key=eisycQlpcWXRn38ebyMigXiu2VSB992i')
+    fetch('https://api.giphy.com/v1/gifs/random?api_key=')
     .then(response => response.json())
     .then((result) => {
         console.log(result); //Response will be actual JSON DATa
@@ -90,6 +91,9 @@ randomButton.addEventListener("click",()=>{
     })
     .catch(error=>console.error(`Something went wrong - ${error}`));
 })
+=======
+
+
 
 
 // Category wise GIF's
@@ -97,7 +101,7 @@ randomButton.addEventListener("click",()=>{
 gifCategory.addEventListener("input",()=>{
     // console.log(`Category : ${gifCategory.value}`);
 
-    fetch(`https://api.giphy.com/v1/gifs/search?api_key=eisycQlpcWXRn38ebyMigXiu2VSB992i&q=${gifCategory.value}`)
+    fetch(`https://api.giphy.com/v1/gifs/search?api_key=&q=${gifCategory.value}`)
     .then(response => response.json())
     .then((result) => {
         console.log(result); //Response will be actual JSON DATa

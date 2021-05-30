@@ -1,5 +1,5 @@
 // Base Url : https://api.giphy.com/v1/gifs
-// API-Key: <%=eisycQlpcWXRn38ebyMigXiu2VSB992i%>
+// API-Key: <%=api_key%>
 
 // For Search : https://api.giphy.com/v1/gifs/search
 
@@ -19,7 +19,7 @@ const mainBody = document.querySelector(".main");
 const randomGIF = document.querySelector("#randomimage");
 const randomBox = document.querySelector(".randomGIF");
 
-const key = "eisycQlpcWXRn38ebyMigXiu2VSB992i";
+const key = "your_api_key";
 
 // Search GIF
 searchBar.addEventListener("input", () => {

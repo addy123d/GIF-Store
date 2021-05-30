@@ -19,7 +19,7 @@ const mainBody = document.querySelector(".main");
 const randomGIF = document.querySelector("#randomimage");
 const randomBox = document.querySelector(".randomGIF");
 
-const key = "your_api_key";
+const key = "eisycQlpcWXRn38ebyMigXiu2VSB992i";
 
 // Search GIF
 searchBar.addEventListener("input", () => {

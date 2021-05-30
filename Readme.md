@@ -1,10 +1,4 @@
-# GIF-Store Progressive Web App
-
-
-# Demo
-![gif demo](https://user-images.githubusercontent.com/54389203/97185594-4267e280-17c6-11eb-8607-24a58fd31b83.gif)   
-
-
+# GIF-Store Progressive Web App  
 ## Tech Stack
 | Name                   | Resources                                                                             |
 | -----------------------|:-------------------------------------------------------------------------------------:|

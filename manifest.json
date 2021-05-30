@@ -1,0 +1,50 @@
+{
+    "name": "GIF Store",
+    "short_name": "GIFStore",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [{
+            "src": "/images/icons/icon-92px x 92px.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/images/icons/icon-96px x 96px.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/images/icons/icon-128px x 128px.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/images/icons/icon-144px x 144px.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/images/icons/icon-152px x 152px.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "/images/icons/icon-192px x 192px.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/icons/icon-384px x 384px.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "/images/icons/icon-512px x 512px.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
